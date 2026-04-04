@@ -16,8 +16,12 @@ public class Main {
 
         switch (choice){
             case 1:
+                StOparation stOparation = new StOparation();
+                stOparation.soparation();
 
             case 2:
+
+
 
 
             case 3:
