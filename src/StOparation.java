@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
 public class StOparation {
-    public void soparation(){
+    public static void soparation(){
         Scanner sc = new Scanner(System.in);
         int choice;
+
+do {
 
 
         System.out.println("Student Operations");
@@ -20,10 +22,49 @@ public class StOparation {
 
         switch(choice) {
             case 1:
+                addStudent();
+                break;
+
+                case 2:
+                    viewStudent();
+                    break;
+
+                    case 3:
+                        updateStudent();
+                        break;
+
+                        case 4:
+                            deleteStudent();
+                            break;
+
+                            case 5:
+                                Main.main(null);
+                                return;
+                                case 0:
+                                    System.exit(0);
+
+
 
         }
+} while (true);
 
 
+    }
+
+    public static void addStudent(){
+
+    }
+
+
+    public static void viewStudent(){
+
+    }
+
+    public static void updateStudent(){
+
+    }
+
+    public static void deleteStudent(){
 
     }
 }
