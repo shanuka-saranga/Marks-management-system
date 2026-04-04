@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class StOparation {
-    public static void soparation(){
+    public  void soparation(){
         Scanner sc = new Scanner(System.in);
         int choice;
 

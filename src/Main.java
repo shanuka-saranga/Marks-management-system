@@ -20,11 +20,17 @@ public class Main {
                 stOparation.soparation();
 
             case 2:
+                Markoperation markoperation = new Markoperation();
+                markoperation.moperation();
+
 
 
 
 
             case 3:
+                System.exit(0);
+                default:
+                    break;
 
         }
 
