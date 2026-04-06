@@ -26,7 +26,7 @@ do {
                 break;
 
                 case 2:
-                    viewStudent();
+                    StudentManager.viewStudent(sc);
                     break;
 
                     case 3:

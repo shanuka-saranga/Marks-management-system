@@ -23,10 +23,6 @@ public class Main {
                 Markoperation markoperation =new Markoperation();
                 markoperation.moperation();
 
-
-
-
-
             case 3:
                 System.exit(0);
                 default:
