@@ -17,12 +17,12 @@ do {
         System.out.println("0. Exit Program");
 
 
-        choice = sc.nextInt();
-        System.out.println("Enter your choice: ");
+    System.out.print("Enter your choice: ");
+    choice = Integer.parseInt(sc.nextLine());
 
         switch(choice) {
             case 1:
-                addStudent();
+                StudentManager.addStudent(sc);
                 break;
 
                 case 2:
