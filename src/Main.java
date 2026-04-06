@@ -20,7 +20,7 @@ public class Main {
                 stOparation.soparation();
 
             case 2:
-                Markoperation markoperation = new Markoperation();
+                Markoperation markoperation =new Markoperation();
                 markoperation.moperation();
 
 
