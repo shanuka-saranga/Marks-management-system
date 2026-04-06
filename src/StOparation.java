@@ -34,7 +34,7 @@ do {
                         break;
 
                         case 4:
-                            deleteStudent();
+                            StudentManager.deleteStudent(sc);
                             break;
 
                             case 5:
