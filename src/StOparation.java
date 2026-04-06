@@ -30,7 +30,7 @@ do {
                     break;
 
                     case 3:
-                        updateStudent();
+                        StudentManager.updateStudent(sc);
                         break;
 
                         case 4:
