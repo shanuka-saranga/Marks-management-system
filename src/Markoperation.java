@@ -26,7 +26,15 @@ public class Markoperation {
                     break;
 
                     case 3:
-                        MarksManager
+                        MarksManager.displayIndividualMarks();
+                        break;
+                        case 4:
+                            Main.main(null);
+                            break;
+                            case 0:
+                                System.exit(0);
+                                default:
+                                    break;
 
 
 
