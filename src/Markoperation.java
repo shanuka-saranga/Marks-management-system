@@ -22,6 +22,11 @@ public class Markoperation {
                 break;
 
                 case 2:
+                    MarksManager.displayAllMarks();
+                    break;
+
+                    case 3:
+                        MarksManager
 
 
 

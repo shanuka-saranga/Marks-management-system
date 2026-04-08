@@ -121,6 +121,62 @@ public class MarksManager {
 
 
 
+    public static void displayIndividualMarks() {
+        BufferedReader marksReader = null;
+        try {
+            BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+            System.out.print("Enter RegNo: ");
+            String regNoInput = input.readLine();
+
+            marksReader = new BufferedReader(new FileReader("MarksData.txt"));
+            String markLine;
+            boolean found = false;
+
+            System.out.println("RegNo\tName\tQuiz1\tQuiz2\tQuiz3\tMid\tEnd\tTotal\tGrade");
+
+            while ((markLine = marksReader.readLine()) != null) {
+                String[] markData = markLine.split(" ");
+
+                String regNo = markData[0];
+
+                if (regNo.equals(regNoInput)) {
+                    int q1 = Integer.parseInt(markData[1]);
+                    int q2 = Integer.parseInt(markData[2]);
+                    int q3 = Integer.parseInt(markData[3]);
+                    int mid = Integer.parseInt(markData[4]);
+                    int end = Integer.parseInt(markData[5]);
+
+                    String name = getStudentName(regNo);
+                    double total = calculateTotal(q1, q2, q3, mid, end);
+                    String grade = calculateGrade(total);
+
+                    System.out.printf("%s\t%s\t%d\t%d\t%d\t%d\t%d\t%.2f\t%s\n",
+                            regNo, name, q1, q2, q3, mid, end, total, grade);
+
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                System.out.println("Marks not found for this student!");
+            }
+
+        } catch (IOException e) {
+            System.out.println("Error reading file!");
+        } finally {
+            try {
+                if (marksReader != null) {
+                    marksReader.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Error closing file!");
+            }
+        }
+    }
+
+
+
 
 
 
