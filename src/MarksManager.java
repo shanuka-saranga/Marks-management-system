@@ -73,6 +73,28 @@ public class MarksManager {
         }
     }
 
+    public static String getStudentName(String regNo) {
+        try {
+            BufferedReader studentReader = new BufferedReader(new FileReader("StudentData.txt"));
+            String line;
+
+            while ((line = studentReader.readLine()) != null) {
+                String[] data = line.split(" ");
+                if (data[0].equals(regNo)) {
+                    studentReader.close();
+                    return data[1];
+                }
+            }
+
+            studentReader.close();
+        } catch (IOException e) {
+            System.out.println("Error reading student file!");
+        }
+
+        return "Unknown";
+    }
+
+
 
 
 
