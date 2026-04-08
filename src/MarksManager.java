@@ -94,6 +94,31 @@ public class MarksManager {
         return "Unknown";
     }
 
+    public static double calculateTotal(int q1, int q2, int q3, int mid, int end) {
+        int lowestQuiz = Math.min(q1, Math.min(q2, q3));
+        int bestTwoSum = q1 + q2 + q3 - lowestQuiz;
+
+        double quizPart = (bestTwoSum / 200.0) * 10.0;
+        double midPart = (mid / 100.0) * 20.0;
+        double endPart = (end / 100.0) * 70.0;
+
+        return quizPart + midPart + endPart;
+    }
+
+    public static String calculateGrade(double total) {
+        if (total >= 75) {
+            return "A";
+        } else if (total >= 65) {
+            return "B";
+        } else if (total >= 55) {
+            return "C";
+        } else if (total >= 45) {
+            return "S";
+        } else {
+            return "F";
+        }
+    }
+
 
 
 
