@@ -5,19 +5,24 @@ public class Markoperation {
         Scanner sc = new Scanner(System.in);
         int choice;
 
-        System.out.println("1. Marks Operation");
-        System.out.println("2. Add Marks");
-        System.out.println("3. Display All Students Marks");
-        System.out.println("4. Display Individual Student Marks");
-        System.out.println("5. Main Menu");
+        System.out.println("Marks Operation");
+        System.out.println("1. Add Marks");
+        System.out.println("2. Display All Students Marks");
+        System.out.println("3. Display Individual Student Marks");
+        System.out.println("4. Main Menu");
         System.out.println("0. Exit");
 
-        choice = sc.nextInt();
+        choice = Integer.parseInt(sc.nextLine());
         System.out.println("Enter your choice");
 
 
         switch (choice) {
             case 1:
+                MarksManager.addMarks(sc);
+                break;
+
+                case 2:
+
 
 
         }
